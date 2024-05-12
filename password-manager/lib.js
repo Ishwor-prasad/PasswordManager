@@ -1,5 +1,6 @@
 function encode(data) {
   return Buffer.from(data, "utf-8");
+
 }
 
 function decode(data) {
