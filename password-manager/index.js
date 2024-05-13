@@ -42,21 +42,6 @@ async function loadKVSfromFile() {
   }
 }
 
-// function conversion(kvs) {
-//   const kvsdata = {};
-//   for (const key in kvs) {
-//     const cleanKey = key.replace(/"/g, ""); // Remove extra quotes
-//     const iv = kvs[key].iv.replace(/"/g, ""); // Remove extra quotes
-//     const ciphertext = kvs[key].ciphertext.buffer; // Convert Buffer to ArrayBuffer
-//     console.log("ciphertext: ", ciphertext);
-//     kvsdata[cleanKey] = {
-//       iv,
-//       ciphertext,
-//       byteLength: kvs[key].byteLength,
-//     };
-//   }
-//   return kvsdata;
-// }
 
 function conversion(input) {
   const loadedKVS = {};
@@ -124,21 +109,7 @@ async function loadMasterKey() {
   }
 }
 
-// Function to load the master key from file
-// async function loadMasterKey() {
-//   try {
-//     const keyData = await fs.readFile(storageFile, "utf-8");
-//     return await subtle.importKey(
-//       "raw",
-//       Buffer.from(keyData, "hex"),
-//       { name: "PBKDF2" },
-//       false,
-//       ["deriveKey"]
-//     );
-//   } catch (error) {
-//     return null; // Return null if file doesn't exist or cannot be read
-//   }
-// }
+
 
 // Function to store the master key to file
 async function storeMasterKey(derivedKey) {

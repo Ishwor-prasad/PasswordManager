@@ -32,7 +32,7 @@ class KeyChain {
   }
 
   static async getKey(keyData) {
-    // Implement key retrieval logic here
+
   }
 
   async set(domain, password) {
@@ -63,7 +63,7 @@ class KeyChain {
   static async computeHMAC(data, key) {
     const hmac = crypto.createHmac("sha256", key);
     hmac.update(data);
-    return hmac.digest("hex");
+
   }
 }
 
