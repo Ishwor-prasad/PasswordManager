@@ -1,4 +1,4 @@
-const KeyChain = require("./password-manager");
+const Keychain = require("./password-manager");
 const { subtle } = require("crypto").webcrypto;
 const crypto = require("crypto");
 const fs = require("fs").promises;
